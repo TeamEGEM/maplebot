@@ -45,7 +45,7 @@ exports.run = (client, message, args) => {
 
         message.channel.send({embed})
 		} else {
-			console.log('**EGEM BOT** Maplechange MARKET API ISSUE!');
+			console.log('**MCX BOT** Maplechange MARKET API ISSUE!');
 		}
 	})
 }
