@@ -16,14 +16,14 @@ exports.run = (client, message, args) => {
       var change = response["ticker"]["change"];
       const embed = new Discord.RichEmbed()
         .setTitle("Maple Change Discord Bot.")
-        .setAuthor("MCX", miscSettings.egemspin)
+        .setAuthor("MCX", miscSettings.img32x32)
         /*
          * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
          */
-        .setColor(miscSettings.okcolor)
+        .setColor(miscSettings.msgcolor)
         .setDescription(":ledger: Maplechange EGEM Market Data:")
         .setFooter(miscSettings.footerBranding, miscSettings.img32x32)
-        .setThumbnail(miscSettings.img32shard)
+        .setThumbnail(miscSettings.imgEGEM)
         /*
          * Takes a Date object, defaults to current date.
          */
