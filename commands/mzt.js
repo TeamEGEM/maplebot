@@ -23,7 +23,7 @@ exports.run = (client, message, args) => {
         .setColor(miscSettings.msgcolor)
         .setDescription(":ledger: Maplechange MZT Market Data:")
         .setFooter(miscSettings.footerBranding, miscSettings.img32x32)
-        .setThumbnail(miscSettings.imgMSR)
+        .setThumbnail(miscSettings.imgMZT)
         /*
          * Takes a Date object, defaults to current date.
          */
