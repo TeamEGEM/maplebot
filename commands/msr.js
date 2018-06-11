@@ -4,7 +4,7 @@ const miscSettings = require("../cfg/settings.json");
 var getJSON = require('get-json');
 
 exports.run = (client, message, args) => {
-  var btcPrice = getJSON('https://maplechange.com/api/v2/tickers/mribtc.json', function(error, response){
+  var btcPrice = getJSON('https://maplechange.com/api/v2/tickers/msrbtc.json', function(error, response){
 		if(!error) {
       var buy = response["ticker"]["buy"];
       var sell = response["ticker"]["sell"];
@@ -21,9 +21,9 @@ exports.run = (client, message, args) => {
          * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
          */
         .setColor(miscSettings.msgcolor)
-        .setDescription(":ledger: Maplechange MRI Market Data:")
+        .setDescription(":ledger: Maplechange MSR Market Data:")
         .setFooter(miscSettings.footerBranding, miscSettings.img32x32)
-        .setThumbnail(miscSettings.imgMRI)
+        .setThumbnail(miscSettings.imgMSR)
         /*
          * Takes a Date object, defaults to current date.
          */
@@ -34,15 +34,14 @@ exports.run = (client, message, args) => {
         .addField("Low", low+" BTC", true)
         .addField("High", high+" BTC", true)
         .addField("Last", last+" BTC", true)
-        .addField("Volume", vol+" MRI", true)
+        .addField("Volume", vol+" MSR", true)
         .addField("Volbtc", volbtc+" BTC", true)
         .addField("Change", change+" %", true)
         .addField("Quick links:","Direct links to Maplechange.com trade page.")
-        .addField("Bitcoin Pair", "[BTC/MRI :scales:](https://maplechange.com/markets/mribtc)", true)
-        .addField("Litecoin Pair", "[LTC/MRI :scales:](https://maplechange.com/markets/mriltc)", true)
-        .addField("Ethereum Pair", "[ETH/MRI :scales:](https://maplechange.com/markets/mrieth)", true)
-        .addField("WeyCoin Pair", "[WAE/MRI :scales:](https://maplechange.com/markets/mriwae)", true)
-        .addField("XGOX Pair", "[XGOX/MRI :scales:](https://maplechange.com/markets/mrixgox)", true)
+        .addField("Bitcoin Pair", "[BTC/MSR :scales:](https://maplechange.com/markets/msrbtc)", true)
+        .addField("Litecoin Pair", "[LTC/MSR :scales:](https://maplechange.com/markets/msrltc)", true)
+        .addField("Ethereum Pair", "[ETH/MSR :scales:](https://maplechange.com/markets/msreth)", true)
+        .addField("WeyCoin Pair", "[WAE/MSR :scales:](https://maplechange.com/markets/msrwae)", true)
 
         message.channel.send({embed})
 		} else {
