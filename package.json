@@ -1,0 +1,19 @@
+{
+  "name": "maplebot",
+  "version": "0.0.1",
+  "description": "API coin bot.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Riddlez666",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "async": "^2.6.0",
+    "discord.js": "^11.3.0",
+    "get-json": "^1.0.0",
+    "javascript-time-ago": "^1.0.28",
+    "lodash": "^4.17.5",
+    "nonce": "^1.0.4"
+  }
+}
