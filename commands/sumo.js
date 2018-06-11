@@ -4,7 +4,7 @@ const miscSettings = require("../cfg/settings.json");
 var getJSON = require('get-json');
 
 exports.run = (client, message, args) => {
-  var btcPrice = getJSON('https://maplechange.com/api/v2/tickers/spesbtc.json', function(error, response){
+  var btcPrice = getJSON('https://maplechange.com/api/v2/tickers/sumobtc.json', function(error, response){
 		if(!error) {
       var buy = response["ticker"]["buy"];
       var sell = response["ticker"]["sell"];
@@ -21,9 +21,9 @@ exports.run = (client, message, args) => {
          * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
          */
         .setColor(miscSettings.msgcolor)
-        .setDescription(":ledger: Maplechange SPES Market Data:")
+        .setDescription(":ledger: Maplechange SUMO Market Data:")
         .setFooter(miscSettings.footerBranding, miscSettings.img32x32)
-        .setThumbnail(miscSettings.imgSPES)
+        .setThumbnail(miscSettings.imgSUMO)
         /*
          * Takes a Date object, defaults to current date.
          */
@@ -34,14 +34,14 @@ exports.run = (client, message, args) => {
         .addField("Low", low+" BTC", true)
         .addField("High", high+" BTC", true)
         .addField("Last", last+" BTC", true)
-        .addField("Volume", vol+" SPES", true)
+        .addField("Volume", vol+" SUMO", true)
         .addField("Volbtc", volbtc+" BTC", true)
         .addField("Change", change+" %", true)
         .addField("Quick links:","Direct links to Maplechange.com trade page.")
-        .addField("Bitcoin Pair", "[BTC/SPES :scales:](https://maplechange.com/markets/spesbtc)", true)
-        .addField("Litecoin Pair", "[LTC/SPES :scales:](https://maplechange.com/markets/spesltc)", true)
-        .addField("Ethereum Pair", "[ETH/SPES :scales:](https://maplechange.com/markets/speseth)", true)
-        .addField("WeyCoin Pair", "[WAE/SPES :scales:](https://maplechange.com/markets/speswae)", true)
+        .addField("Bitcoin Pair", "[BTC/SUMO :scales:](https://maplechange.com/markets/sumobtc)", true)
+        .addField("Litecoin Pair", "[LTC/SUMO :scales:](https://maplechange.com/markets/sumoltc)", true)
+        .addField("Ethereum Pair", "[ETH/SUMO :scales:](https://maplechange.com/markets/sumoeth)", true)
+        .addField("WeyCoin Pair", "[WAE/SUMO :scales:](https://maplechange.com/markets/sumowae)", true)
 
         message.channel.send({embed})
 		} else {
