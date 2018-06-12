@@ -11,7 +11,7 @@ exports.run = (client, message, args) => {
      * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
      */
      .setColor(miscSettings.msgcolor)
-     .setDescription(":ledger: Maplechange Bot Help:")
+     .setDescription(":ledger: Maple Change Bot Help:")
      .setFooter(miscSettings.footerBranding, miscSettings.img32x32)
      .setThumbnail(miscSettings.img32x32)
     /*

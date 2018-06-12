@@ -18,7 +18,7 @@ exports.run = (client, message, args) => {
          * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
          */
         .setColor(miscSettings.msgcolor)
-        .setDescription(":ledger: Maplechange LTC Market Data:")
+        .setDescription(":ledger: Maple Change LTC Market Data:")
         .setFooter(miscSettings.footerBranding, miscSettings.img32x32)
         .setThumbnail(miscSettings.imgLTC)
         /*
@@ -35,7 +35,7 @@ exports.run = (client, message, args) => {
 
         message.channel.send({embed})
 		} else {
-			console.log('**MCX BOT** Maplechange MARKET API ISSUE!');
+			console.log('**MCX BOT** Maple Change MARKET API ISSUE!');
 		}
 	})
 }
