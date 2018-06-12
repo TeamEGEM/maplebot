@@ -42,6 +42,7 @@ exports.run = (client, message, args) => {
         .addField("Bitcoin Pair", "[BTC/EGEM :scales:](https://maplechange.com/markets/egembtc)", true)
         .addField("Litecoin Pair", "[LTC/EGEM :scales:](https://maplechange.com/markets/egemltc)", true)
         .addField("Ethereum Pair", "[ETH/EGEM :scales:](https://maplechange.com/markets/egemeth)", true)
+        .addField("WeyCoin Pair", "[WAE/EGEM :scales:](https://maplechange.com/markets/egemwae)", true)
         .addField("Denarius Pair", "[EGEM/DNR :scales:](https://maplechange.com/markets/dnregem)", true)
         .addField("Shield Pair", "[EGEM/XSH :scales:](https://maplechange.com/markets/xshegem)", true)
 
