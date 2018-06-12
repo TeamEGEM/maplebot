@@ -41,6 +41,7 @@ exports.run = (client, message, args) => {
         .addField("Quick links:","Direct links to Maplechange.com trade page.")
         .addField("Bitcoin Pair", "[BTC/XSH :scales:](https://maplechange.com/markets/xshbtc)", true)
         .addField("EtherGem Pair", "[EGEM/XSH :scales:](https://maplechange.com/markets/xshegem)", true)
+        .addField("Denarius Pair", "[XSH/DNR :scales:](https://maplechange.com/markets/dnrxsh)", true)
 
         message.channel.send({embed})
 		} else {
