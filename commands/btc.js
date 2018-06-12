@@ -26,7 +26,7 @@ exports.run = (client, message, args) => {
          */
         .setTimestamp()
         .setURL("https://github.com/TeamEGEM/maplebot")
-        .addField("Website:", "http://www.babychain.xyz/")
+        .addField("Website:", "http://www.bitcoin.org")
         .addField("Price", btcPrice+" USD")
         .addField("Change 1 Hour", change1h+" %")
         .addField("Change 24 Hour", change24h+" %")
