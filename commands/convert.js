@@ -4,14 +4,23 @@ const botSettings = require("../botcfg/config.json");
 const miscSettings = require("../cfg/settings.json");
 const prefix = botSettings.prefix;
 exports.run = (client, message, args) => {
-  let coin1 = args[1];
-  let coin2 = args[2];
-  let amount = args[0];
+  const amount = args[0];
+  const coin1 = args[1];
+  const coin2 = args[2];
+
+  // The list of if/else is replaced with those simple 2 lines:
+  try {
+    let coin1File = require(`./price/${coin1}.txt`);
+    let coin2File = require(`./price/${coin2}.txt`);
+    let coinMath = coin1File/coin2file;
+  
+  } catch (err) {
+    //console.log("**Maple Change BOT** No file for that command, prolly other system in use.")
+    console.error(err);
+  }
 
 
-
-
-  let result = "RESULTS"
+  let result = coinmath;
   const embed = new Discord.RichEmbed()
     .setTitle("Maple Change Discord Bot.")
     .setAuthor("MCX", miscSettings.img32x32)
@@ -19,7 +28,7 @@ exports.run = (client, message, args) => {
      * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
      */
      .setColor(miscSettings.msgcolor)
-     .setDescription(":ledger: Maple Change Convertion Bot:")
+     .setDescription(":ledger: Maple Change Conversion Bot:")
      .setFooter(miscSettings.footerBranding, miscSettings.img32x32)
      .setThumbnail(miscSettings.img32x32)
     /*
