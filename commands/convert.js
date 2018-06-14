@@ -13,7 +13,8 @@ exports.run = (client, message, args) => {
   try {
     let coin1File = fs.readFileSync(`./price/${coin1}.txt`);
     let coin2File = fs.readFileSync(`./price/${coin2}.txt`);
-    var coinMath = coin1File/coin2File;
+    var coinAmount = amount*coin1File;
+    var coinMath = coinAmount/coin2File;
     console.log(coin1File);
     console.log(coin2File);
 
