@@ -4,7 +4,11 @@ const fs = require("fs");
 const Discord = require("discord.js");
 const botSettings = require("./botcfg/config.json");
 const miscSettings = require("./cfg/settings.json");
+const getprices = require("./func/getprices.js");
 var getJSON = require('get-json');
+
+// Update Data
+setInterval(getprices,miscSettings.pricesDelay);
 
 
 const prefix = botSettings.prefix;

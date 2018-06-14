@@ -2,6 +2,7 @@
   "msgcolor": "0x00AE86",
   "footerBranding": "© MapleChange.com",
 	"botChannelId": "455901896780283904",
+  "pricesDelay": "60000",
   "img32x32":"https://raw.githubusercontent.com/TeamEGEM/maplebot/master/imgs/img32x32.png",
   "imgEGEM":"https://raw.githubusercontent.com/TeamEGEM/meta/master/images/various/32.png",
   "imgBABY":"https://raw.githubusercontent.com/TeamEGEM/maplebot/master/imgs/icon-baby32.png",
