@@ -1,5 +1,6 @@
 
 const Discord = require("discord.js");
+const fs = require("fs");
 const botSettings = require("../botcfg/config.json");
 const miscSettings = require("../cfg/settings.json");
 const prefix = botSettings.prefix;
@@ -10,8 +11,8 @@ exports.run = (client, message, args) => {
 
   // The list of if/else is replaced with those simple 2 lines:
   try {
-    let coin1File = require(`../price/${coin1}.txt`);
-    let coin2File = require(`../price/${coin2}.txt`);
+    let coin1File = fs.readFileSync(`../price/${coin1}.txt`);
+    let coin2File = fs.readFileSync(`../price/${coin2}.txt`);
     var coinMath = coin1File/coin2File;
     console.log(coin1File);
     console.log(coin2File);
