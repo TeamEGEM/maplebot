@@ -19,7 +19,9 @@ exports.run = (client, message, args) => {
     console.error(err);
   }
 
-
+  console.log(coin1File);
+  console.log(coin2File);
+  console.log(coinMath);
   let result = coinMath;
   const embed = new Discord.RichEmbed()
     .setTitle("Maple Change Discord Bot.")
