@@ -11,8 +11,8 @@ exports.run = (client, message, args) => {
 
   // The list of if/else is replaced with those simple 2 lines:
   try {
-    let coin1File = fs.readFileSync(`../price/${coin1}.txt`);
-    let coin2File = fs.readFileSync(`../price/${coin2}.txt`);
+    let coin1File = fs.readFileSync(`./price/${coin1}.txt`);
+    let coin2File = fs.readFileSync(`./price/${coin2}.txt`);
     var coinMath = coin1File/coin2File;
     console.log(coin1File);
     console.log(coin2File);
