@@ -5,6 +5,54 @@ var getJSON = require('get-json');
 
 function getPrice(){
 
+  var dgbPrice = getJSON('https://api.coinmarketcap.com/v1/ticker/digibyte/', function(error, response){
+    if(!error) {
+      var dgbPrice = response[0]["price_btc"];
+      console.log('**MCX BOT** DGB Price has been logged to the file. ' + dgbPrice +" BTC");
+      fs.writeFile("price/dgb.txt",dgbPrice,(err)=>{
+        if(err) throw err;
+      });
+    } else {
+      console.log('**MCX BOT** DGB API ISSUE!');
+    }
+  })
+
+  var ethPrice = getJSON('https://api.coinmarketcap.com/v1/ticker/ethereum/', function(error, response){
+    if(!error) {
+      var ethPrice = response[0]["price_btc"];
+      console.log('**MCX BOT** ETH Price has been logged to the file. ' + ethPrice +" BTC");
+      fs.writeFile("price/eth.txt",ethPrice,(err)=>{
+        if(err) throw err;
+      });
+    } else {
+      console.log('**MCX BOT** ETH API ISSUE!');
+    }
+  })
+
+  var ltcPrice = getJSON('https://api.coinmarketcap.com/v1/ticker/litecoin/', function(error, response){
+    if(!error) {
+      var ltcPrice = response[0]["price_btc"];
+      console.log('**MCX BOT** LTC Price has been logged to the file. ' + ltcPrice +" BTC");
+      fs.writeFile("price/ltc.txt",ltcPrice,(err)=>{
+        if(err) throw err;
+      });
+    } else {
+      console.log('**MCX BOT** LTC API ISSUE!');
+    }
+  })
+
+  var dogePrice = getJSON('https://api.coinmarketcap.com/v1/ticker/dogecoin/', function(error, response){
+    if(!error) {
+      var dogePrice = response[0]["price_btc"];
+      console.log('**MCX BOT** DOGE Price has been logged to the file. ' + dogePrice +" BTC");
+      fs.writeFile("price/doge.txt",dogePrice,(err)=>{
+        if(err) throw err;
+      });
+    } else {
+      console.log('**MCX BOT** DOGE API ISSUE!');
+    }
+  })
+
   var egemPrice = getJSON('https://maplechange.com/api/v2/tickers/egembtc.json', function(error, response){
 		if(!error) {
 			var egemPrice = response["ticker"]["last"];
