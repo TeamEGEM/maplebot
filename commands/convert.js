@@ -12,7 +12,7 @@ exports.run = (client, message, args) => {
   try {
     let coin1File = require(`../price/${coin1}.txt`);
     let coin2File = require(`../price/${coin2}.txt`);
-    let coinMath = coin1File/coin2File;
+    var coinMath = coin1File/coin2File;
 
   } catch (err) {
     //console.log("**Maple Change BOT** No file for that command, prolly other system in use.")
