@@ -39,7 +39,7 @@ exports.run = (client, message, args) => {
      */
     .setTimestamp()
     .setURL("https://github.com/TeamEGEM/maplebot")
-    .addField("Converting: "+ amount + " of "+ coin1 + " to " + coin2 , "Here is the result of the conversion: " + result)
+    .addField("Converting: "+ amount + " of "+ coin1 + " to " + coin2 , "Here is the result of the conversion: " + Number(result).toFixed(8))
 
     message.channel.send({embed})
 }
