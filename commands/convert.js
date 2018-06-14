@@ -10,17 +10,17 @@ exports.run = (client, message, args) => {
 
   // The list of if/else is replaced with those simple 2 lines:
   try {
-    let coin1File = require(`./price/${coin1}.txt`);
-    let coin2File = require(`./price/${coin2}.txt`);
+    let coin1File = require(`../price/${coin1}.txt`);
+    let coin2File = require(`../price/${coin2}.txt`);
     let coinMath = coin1File/coin2file;
-  
+
   } catch (err) {
     //console.log("**Maple Change BOT** No file for that command, prolly other system in use.")
     console.error(err);
   }
 
 
-  let result = coinmath;
+  let result = coinMath;
   const embed = new Discord.RichEmbed()
     .setTitle("Maple Change Discord Bot.")
     .setAuthor("MCX", miscSettings.img32x32)
