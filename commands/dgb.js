@@ -14,16 +14,12 @@ exports.run = (client, message, args) => {
       const embed = new Discord.RichEmbed()
         .setTitle("Maple Change Discord Bot.")
         .setAuthor("MCX", miscSettings.img32x32)
-        /*
-         * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
-         */
+
         .setColor(miscSettings.msgcolor)
         .setDescription(":ledger: Maple Change DGB Market Data:")
         .setFooter(miscSettings.footerBranding, miscSettings.img32x32)
         .setThumbnail(miscSettings.imgDGB)
-        /*
-         * Takes a Date object, defaults to current date.
-         */
+
         .setTimestamp()
         .setURL("https://github.com/TeamEGEM/maplebot")
         .addField("Website:", "https://digibyte.io/")
