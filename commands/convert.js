@@ -13,14 +13,14 @@ exports.run = (client, message, args) => {
     let coin1File = require(`../price/${coin1}.txt`);
     let coin2File = require(`../price/${coin2}.txt`);
     var coinMath = coin1File/coin2File;
+    console.log(coin1File);
+    console.log(coin2File);
 
   } catch (err) {
     //console.log("**Maple Change BOT** No file for that command, prolly other system in use.")
     console.error(err);
   }
 
-  console.log(coin1File);
-  console.log(coin2File);
   console.log(coinMath);
   let result = coinMath;
   const embed = new Discord.RichEmbed()
