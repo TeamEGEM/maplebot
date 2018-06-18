@@ -35,7 +35,7 @@ exports.run = (client, message, args) => {
         .addField("Low", low+" BTC", true)
         .addField("High", high+" BTC", true)
         .addField("Last", last+" BTC", true)
-        .addField("Volume", vol+" WOW", true)
+        .addField("Volume", vol+" ETNX", true)
         .addField("Volbtc", volbtc+" BTC", true)
         .addField("Change", change+" %", true)
         .addField("Quick links:","Direct links to Maplechange.com trade page.")
