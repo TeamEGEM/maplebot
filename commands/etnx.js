@@ -4,7 +4,7 @@ const miscSettings = require("../cfg/settings.json");
 var getJSON = require('get-json');
 
 exports.run = (client, message, args) => {
-  var btcPrice = getJSON('https://maplechange.com/api/v2/tickers/entxbtc.json', function(error, response){
+  var btcPrice = getJSON('https://maplechange.com/api/v2/tickers/etnxbtc.json', function(error, response){
 		if(!error) {
       var buy = response["ticker"]["buy"];
       var sell = response["ticker"]["sell"];
@@ -21,9 +21,9 @@ exports.run = (client, message, args) => {
          * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
          */
         .setColor(miscSettings.msgcolor)
-        .setDescription(":ledger: Maple Change ENTX Market Data:")
+        .setDescription(":ledger: Maple Change ETNX Market Data:")
         .setFooter(miscSettings.footerBranding, miscSettings.img32x32)
-        .setThumbnail(miscSettings.imgENTX)
+        .setThumbnail(miscSettings.imgETNX)
         /*
          * Takes a Date object, defaults to current date.
          */
@@ -39,10 +39,10 @@ exports.run = (client, message, args) => {
         .addField("Volbtc", volbtc+" BTC", true)
         .addField("Change", change+" %", true)
         .addField("Quick links:","Direct links to Maplechange.com trade page.")
-        .addField("Bitcoin Pair", "[BTC/ENTX :scales:](https://maplechange.com/markets/entxbtc)", true)
-        .addField("Litecoin Pair", "[LTC/ENTX :scales:](https://maplechange.com/markets/entxltc)", true)
-        .addField("Ethereum Pair", "[ETH/ENTX :scales:](https://maplechange.com/markets/entxeth)", true)
-        .addField("WeyCoin Pair", "[WAE/ENTX :scales:](https://maplechange.com/markets/entxwae)", true)
+        .addField("Bitcoin Pair", "[BTC/ETNX :scales:](https://maplechange.com/markets/etnxbtc)", true)
+        .addField("Litecoin Pair", "[LTC/ETNX :scales:](https://maplechange.com/markets/etnxltc)", true)
+        .addField("Ethereum Pair", "[ETH/ETNX :scales:](https://maplechange.com/markets/etnxeth)", true)
+        .addField("WeyCoin Pair", "[WAE/ETNX :scales:](https://maplechange.com/markets/etnxwae)", true)
 
         message.channel.send({embed})
 		} else {
