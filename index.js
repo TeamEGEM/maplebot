@@ -10,7 +10,6 @@ var getJSON = require('get-json');
 // Update Data
 setInterval(getprices,miscSettings.pricesDelay);
 
-
 const prefix = botSettings.prefix;
 const bot = new Discord.Client({disableEveryone:true});
 
