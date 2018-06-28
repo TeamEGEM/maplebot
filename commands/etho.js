@@ -39,7 +39,7 @@ exports.run = (client, message, args) => {
         .addField("Volbtc", volbtc+" BTC", true)
         .addField("Change", change+" %", true)
         .addField("Quick links:","Direct links to Maplechange.com trade page.")
-        .addField("Bitcoin Pair", "[BTC/ETNX :scales:](https://maplechange.com/markets/ethobtc)", true)
+        .addField("Bitcoin Pair", "[BTC/ETHO :scales:](https://maplechange.com/markets/ethobtc)", true)
 
         message.channel.send({embed})
 		} else {
