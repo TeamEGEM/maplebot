@@ -45,6 +45,7 @@ exports.run = (client, message, args) => {
         .addField("WeyCoin Pair", "[WAE/EGEM :scales:](https://maplechange.com/markets/egemwae)", true)
         .addField("Denarius Pair", "[EGEM/DNR :scales:](https://maplechange.com/markets/dnregem)", true)
         .addField("Shield Pair", "[EGEM/XSH :scales:](https://maplechange.com/markets/xshegem)", true)
+        .addField("Vertcoin Pair", "[EGEM/VTC :scales:](https://maplechange.com/markets/vtcegem)", true)
 
         message.channel.send({embed})
 		} else {
