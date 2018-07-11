@@ -29,7 +29,7 @@ exports.run = (client, message, args) => {
          */
         .setTimestamp()
         .setURL("https://github.com/TeamEGEM/maplebot")
-        .addField("Website:", "")
+        .addField("Website:", "https://bitcointalk.org/index.php?topic=4519234.0")
         .addField("Buy", buy+" BTC", true)
         .addField("Sell", sell+" BTC", true)
         .addField("Low", low+" BTC", true)
