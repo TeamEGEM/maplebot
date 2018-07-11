@@ -19,7 +19,7 @@ exports.run = (client, message, args) => {
      */
     .setTimestamp()
     .setURL("https://github.com/TeamEGEM/maplebot")
-    .addField(prefix+"ticker", "replace ticker with the coin you want and poof info inbound!")
+    .addField(prefix+"<ticker>", "replace ticker with the coin you want and market data will be returned.")
 
 
     message.channel.send({embed})
