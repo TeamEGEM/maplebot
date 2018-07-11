@@ -125,18 +125,6 @@ function getPrice(){
 		}
 	})
 
-  var dgmPrice = getJSON('https://maplechange.com/api/v2/tickers/dgmbtc.json', function(error, response){
-		if(!error) {
-			var dgmPrice = response["ticker"]["last"];
-			//console.log('**MCX BOT** DGM Price has been logged to the file. ' + dgmPrice +" BTC");
-			fs.writeFile("price/dgm.txt",dgmPrice,(err)=>{
-				if(err) throw err;
-			});
-		} else {
-			console.log('**MCX BOT** DGM API ISSUE!');
-		}
-	})
-
   var gzroPrice = getJSON('https://maplechange.com/api/v2/tickers/gzrobtc.json', function(error, response){
 		if(!error) {
 			var gzroPrice = response["ticker"]["last"];
@@ -194,18 +182,6 @@ function getPrice(){
 			});
 		} else {
 			console.log('**MCX BOT** MZT API ISSUE!');
-		}
-	})
-
-  var nihlPrice = getJSON('https://maplechange.com/api/v2/tickers/nihlbtc.json', function(error, response){
-		if(!error) {
-			var nihlPrice = response["ticker"]["last"];
-			//console.log('**MCX BOT** IRD Price has been logged to the file. ' + irdPrice +" BTC");
-			fs.writeFile("price/nihl.txt",nihlPrice,(err)=>{
-				if(err) throw err;
-			});
-		} else {
-			console.log('**MCX BOT** NIHL API ISSUE!');
 		}
 	})
 

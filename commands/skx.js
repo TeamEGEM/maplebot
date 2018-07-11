@@ -40,9 +40,6 @@ exports.run = (client, message, args) => {
         .addField("Change", change+" %", true)
         .addField("Quick links:","Direct links to Maplechange.com trade page.")
         .addField("Bitcoin Pair", "[BTC/SKX :scales:](https://maplechange.com/markets/skxbtc)", true)
-        .addField("Litecoin Pair", "[LTC/SKX :scales:](https://maplechange.com/markets/skxltc)", true)
-        .addField("Ethereum Pair", "[ETH/SKX :scales:](https://maplechange.com/markets/skxeth)", true)
-        .addField("WeyCoin Pair", "[WAE/SKX :scales:](https://maplechange.com/markets/skxwae)", true)
 
         message.channel.send({embed})
 		} else {

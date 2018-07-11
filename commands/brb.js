@@ -40,10 +40,6 @@ exports.run = (client, message, args) => {
         .addField("Change", change+" %", true)
         .addField("Quick links:","Direct links to Maplechange.com trade page.")
         .addField("Bitcoin Pair", "[BTC/BRB :scales:](https://maplechange.com/markets/brbbtc)", true)
-        .addField("Litecoin Pair", "[LTC/BRB :scales:](https://maplechange.com/markets/brbltc)", true)
-        .addField("Ethereum Pair", "[ETH/BRB :scales:](https://maplechange.com/markets/brbeth)", true)
-        .addField("WeyCoin Pair", "[WAE/BRB :scales:](https://maplechange.com/markets/brbwae)", true)
-
         message.channel.send({embed})
 		} else {
 			console.log('**MCX BOT** Maple Change MARKET API ISSUE!');

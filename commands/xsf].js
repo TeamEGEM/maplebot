@@ -4,7 +4,7 @@ const miscSettings = require("../cfg/settings.json");
 var getJSON = require('get-json');
 
 exports.run = (client, message, args) => {
-  var btcPrice = getJSON('https://maplechange.com/api/v2/tickers/nihlbtc.json', function(error, response){
+  var btcPrice = getJSON('https://maplechange.com/api/v2/tickers/xsfbtc.json', function(error, response){
 		if(!error) {
       var buy = response["ticker"]["buy"];
       var sell = response["ticker"]["sell"];
@@ -21,28 +21,25 @@ exports.run = (client, message, args) => {
          * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
          */
         .setColor(miscSettings.msgcolor)
-        .setDescription(":ledger: Maple Change NIHL Market Data:")
+        .setDescription(":ledger: Maple Change XSF Market Data:")
         .setFooter(miscSettings.footerBranding, miscSettings.img32x32)
-        .setThumbnail(miscSettings.imgNIHL)
+        .setThumbnail(miscSettings.imgXSF)
         /*
          * Takes a Date object, defaults to current date.
          */
         .setTimestamp()
         .setURL("https://github.com/TeamEGEM/maplebot")
-        .addField("Website:", "https://www.nihilo.space/")
+        .addField("Website:", "http://flake.space/")
         .addField("Buy", buy+" BTC", true)
         .addField("Sell", sell+" BTC", true)
         .addField("Low", low+" BTC", true)
         .addField("High", high+" BTC", true)
         .addField("Last", last+" BTC", true)
-        .addField("Volume", vol+" NIHL", true)
+        .addField("Volume", vol+" XSF", true)
         .addField("Volbtc", volbtc+" BTC", true)
         .addField("Change", change+" %", true)
         .addField("Quick links:","Direct links to Maplechange.com trade page.")
-        .addField("Bitcoin Pair", "[BTC/NIHL :scales:](https://maplechange.com/markets/nihlbtc)", true)
-        .addField("Litecoin Pair", "[LTC/NIHL :scales:](https://maplechange.com/markets/nihlltc)", true)
-        .addField("Ethereum Pair", "[ETH/NIHL :scales:](https://maplechange.com/markets/nihleth)", true)
-        .addField("WeyCoin Pair", "[WAE/NIHL :scales:](https://maplechange.com/markets/nihlwae)", true)
+        .addField("Bitcoin Pair", "[BTC/XSF :scales:](https://maplechange.com/markets/xsfbtc)", true)
 
         message.channel.send({embed})
 		} else {
