@@ -19,7 +19,7 @@ bot.on('ready', ()=>{
 
 // Function to turn files into commands.
 bot.on("message", message => {
-	if(message.channel.name != 'coincheckbot') return;
+	if(message.channel.name != 'coinpricebot') return;
 	if(message.channel.type === "dm") return;
   if(message.author.bot) return;
   if(message.content.indexOf(botSettings.prefix) !== 0) return;
