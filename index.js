@@ -7,7 +7,7 @@ let Discord = require('discord.js'),
 
 
 // Update Data
-setInterval(getprices, miscSettings.pricesDelay);
+// setInterval(getprices, miscSettings.pricesDelay);
 
 const prefix = botSettings.prefix;
 const bot = new Discord.Client({disableEveryone:true});
