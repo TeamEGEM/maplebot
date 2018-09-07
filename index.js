@@ -3,7 +3,6 @@
 let Discord = require('discord.js'),
     botSettings = require('./botcfg/config.json'),
     settings = require('./cfg/settings.json'),
-    getPrices = require('./func/getprices.js'),
     getJSON = require('get-json');
 
 
