@@ -1,28 +1,26 @@
 "use strict";
 
-const fs = require("fs");
-const Discord = require("discord.js");
-const botSettings = require("./botcfg/config.json");
-const miscSettings = require("./cfg/settings.json");
-const getprices = require("./func/getprices.js");
-var getJSON = require('get-json');
+let Discord = require('discord.js'),
+    botSettings = require('./botcfg/config.json'),
+    settings = require('./cfg/settings.json'),
+    getPrices = require('./func/getprices.js'),
+    getJSON = require('get-json');
+
 
 // Update Data
-setInterval(getprices,miscSettings.pricesDelay);
+setInterval(getprices, miscSettings.pricesDelay);
 
 const prefix = botSettings.prefix;
 const bot = new Discord.Client({disableEveryone:true});
 
 bot.on('ready', ()=>{
-	console.log("**MCX BOT** is now Online.");
+	console.log("**MapleChange Bot** is now Online.");
 });
 
 // Function to turn files into commands.
 bot.on("message", message => {
-	if(message.channel.name != 'coinpricebot') return;
-	if(message.channel.type === "dm") return;
-  if(message.author.bot) return;
-  if(message.content.indexOf(botSettings.prefix) !== 0) return;
+    if (message.channel.name !== 'coinpricebot' || message.channel.type === 'dm' || message.author.bot || message.content.indexOf(botSettings.prefix) !== 0)
+        return;
 
   // This is the best way to define args. Trust me.
   const args = message.content.slice(botSettings.prefix.length).trim().split(/ +/g);
@@ -31,7 +29,9 @@ bot.on("message", message => {
   // The list of if/else is replaced with those simple 2 lines:
   try {
     let commandFile = require(`./commands/${command}.js`);
-    commandFile.run(bot, message, args);
+
+    commandFile.run(bot, message, command);
+
   } catch (err) {
 		//console.log("**Maple Change BOT** No file for that command, prolly other system in use.")
     console.error(err);
