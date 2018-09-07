@@ -5,9 +5,7 @@ let Discord = require('discord.js'),
 
 exports.run = (client, message, ticker) => {
     let price = getJSON('https://maplechange.com/api/v2/tickers/' + ticker + 'btc.json', function(error, response) {
-        if (error)
-            throw error;
-        message.reply(error);
+
         let pairs = Website.getPairs(ticker.toLowerCase());
 
         const embed = new Discord.RichEmbed()
